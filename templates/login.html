@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Pablo Rail | Login</title>
+<title>PabloPanel | Login</title>
 
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 
@@ -75,7 +75,7 @@ body::before{
 
 .card{
     position:relative;
-    padding:30px 23px 22px;
+    padding:35px 23px 22px;
     border:1px solid var(--border);
     border-radius:28px;
     background:var(--card);
@@ -85,36 +85,30 @@ body::before{
         inset 0 0 30px rgba(0,234,255,.025);
 }
 
-.logo{
-    width:76px;
-    height:76px;
-    margin:0 auto 20px;
-    border-radius:22px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    background:linear-gradient(135deg,#00eaff,#2563ff,#7c3cff);
-    box-shadow:
-        0 0 20px rgba(0,234,255,.5),
-        0 0 55px rgba(37,99,255,.2);
-}
-
 .brand{
     text-align:center;
 }
 
 .brand h1{
-    font-size:28px;
+    font-size:31px;
     font-weight:900;
-    letter-spacing:1px;
-    background:linear-gradient(90deg,#fff,#00eaff,#8b7cff);
+    letter-spacing:2px;
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #00eaff,
+        #2563ff,
+        #8b7cff
+    );
     -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
     color:transparent;
+    text-shadow:0 0 20px rgba(0,234,255,.18);
 }
 
 .brand p{
-    margin-top:7px;
+    margin-top:8px;
     color:var(--muted);
     font-size:11px;
     letter-spacing:.8px;
@@ -135,10 +129,6 @@ label{
     font-size:11px;
     font-weight:700;
     letter-spacing:.5px;
-}
-
-.input-box{
-    position:relative;
 }
 
 input{
@@ -174,7 +164,12 @@ input::placeholder{
     font-size:13px;
     letter-spacing:.4px;
     cursor:pointer;
-    background:linear-gradient(100deg,#00bfff,#2563ff,#713cff);
+    background:linear-gradient(
+        100deg,
+        #00bfff,
+        #2563ff,
+        #713cff
+    );
     box-shadow:
         0 0 20px rgba(0,191,255,.22),
         inset 0 1px rgba(255,255,255,.18);
@@ -211,18 +206,15 @@ input::placeholder{
 }
 
 @media(max-width:360px){
-    .card{
-        padding:25px 18px 20px;
-    }
 
-    .logo{
-        width:68px;
-        height:68px;
+    .card{
+        padding:30px 18px 20px;
     }
 
     .brand h1{
-        font-size:25px;
+        font-size:27px;
     }
+
 }
 </style>
 </head>
@@ -230,14 +222,13 @@ input::placeholder{
 <body>
 
 <div class="login-wrap">
+
     <div class="glow"></div>
 
     <div class="card">
 
-        <div class="logo">⚡</div>
-
         <div class="brand">
-            <h1>PABLO RAIL</h1>
+            <h1>PabloPanel</h1>
             <p>NEON VLESS MANAGEMENT PANEL</p>
         </div>
 
@@ -251,6 +242,7 @@ input::placeholder{
 
             <div class="group">
                 <label>USERNAME</label>
+
                 <input
                     type="text"
                     name="username"
@@ -262,6 +254,7 @@ input::placeholder{
 
             <div class="group">
                 <label>PASSWORD</label>
+
                 <input
                     type="password"
                     name="password"
@@ -279,10 +272,11 @@ input::placeholder{
 
         <div class="footer">
             DESIGNED & DEVELOPED BY
-            <span>PABLO</span>
+            <span>PabloPanel</span>
         </div>
 
     </div>
+
 </div>
 
 </body>
