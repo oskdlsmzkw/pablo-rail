@@ -1,92 +1,248 @@
-<div align="center">
+<div align="center">⚡ PabloPanel
 
-# ⚡ PabloPanel
+Dark Neon VPN Control Panel
 
-### Dark Neon VPN Control Panel
+Clean client links. Live statistics. Beautiful subscription pages.
 
-**A modern, lightweight and gaming-focused VPN management panel.**
+<br>""Railway" (https://img.shields.io/badge/Deploy-Railway-8B5CF6?style=for-the-badge&logo=railway&logoColor=white)" (https://railway.app/)
+""Docker" (https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)" (https://www.docker.com/)
+""VPN" (https://img.shields.io/badge/VPN-Panel-7C3AED?style=for-the-badge)" (https://github.com/)
 
-[![Railway](https://img.shields.io/badge/Deploy-Railway-8B5CF6?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/)
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+</div>---
 
-</div>
+🚀 PabloPanel
 
----
+PabloPanel is a modern Dark Neon VPN Control Panel designed for simple and fast VPN management.
 
-## ✨ Overview
+Manage your users, traffic, subscriptions and configurations from one clean dashboard.
 
-**PabloPanel** is a modern VPN management panel with a **Dark Neon Blue** interface.
-
-It provides an easy way to manage users, traffic, subscriptions and VPN configurations from a clean and responsive dashboard.
-
-The project is designed to work smoothly on **Railway** and is fully responsive for both **desktop and mobile devices**.
+«💜 Fork → Deploy on Railway → Expose port "8080" → Open the panel.»
 
 ---
 
-# 🚀 Features
+✨ Why PabloPanel?
 
-### 👤 User Management
+<div align="center">👤 Users| 📊 Statistics
+Simple user management| Live traffic information
+
+🔗 Subscriptions| 📱 Mobile Ready
+Personal subscription pages| Fully responsive interface
+
+</div>---
+
+🎯 Features
+
+👤 User Management
+
+Create and manage VPN users directly from the dashboard.
 
 - Create users
-- Enable / Disable users
+- Enable / disable users
 - Delete users
 - View user status
-- View user traffic
-- View expiration time
+- View traffic usage
+- View expiration
 
-### 📊 Traffic Management
+📊 Live Statistics
 
-- Total traffic
-- Used traffic
+Monitor your server and users from one place.
+
+- Total users
+- Active users
+- Traffic usage
 - Remaining traffic
-- Traffic percentage
-- User expiration
-- Server statistics
+- User statistics
+- Server status
 
-### 🔗 Subscription System
+🔗 Subscription
+
+Every user gets a dedicated subscription page.
 
 - Personal subscription URL
-- Subscription page for each user
-- Copy subscription link
-- Open subscription directly
+- Traffic usage
+- Remaining traffic
+- Remaining days
+- Configuration list
+- Copy subscription
 - Copy all configurations
 
-### 📦 Configuration Management
+📱 QR & Configs
 
-- Display user configurations
-- Copy individual configurations
-- Copy all configurations
-- QR Code generation
-- Multiple configurations per user
+Make configuration sharing simple.
 
-### 🎨 Interface
-
-- Dark Neon Blue UI
-- Gaming-inspired design
-- Glassmorphism cards
-- Neon effects
-- Responsive layout
-- Mobile optimized
-- Clean dashboard
+- Copy individual configs
+- Copy all configs
+- Generate QR codes
+- Multiple configs per user
 
 ---
 
-# 🖥️ Dashboard
+💎 Subscription Page
 
-The PabloPanel dashboard provides a centralized interface for managing your VPN users.
+The PabloPanel subscription page is designed with a Dark Neon Blue gaming interface.
 
-```text
-┌──────────────────────────────────────┐
-│              PabloPanel              │
-├──────────────────────────────────────┤
-│                                      │
-│  Users        Active        Traffic  │
-│                                      │
-│  Server Status       Traffic Chart   │
-│                                      │
-│  ──────────────────────────────────  │
-│                                      │
-│  User Management                     │
-│                                      │
-└──────────────────────────────────────┘
+Each user can see:
+
+USERNAME
+      ↓
+TRAFFIC USAGE
+      ↓
+TOTAL TRAFFIC
+USED TRAFFIC
+REMAINING
+DAYS LEFT
+      ↓
+SUBSCRIPTION LINK
+      ↓
+VPN CONFIGURATIONS
+
+Users can instantly copy, open, or scan their configurations.
+
+---
+
+🎮 Gaming UI
+
+PabloPanel is built around a modern gaming-inspired interface.
+
+Dark background · Neon blue · Glass cards · Glow effects · Responsive design
+
+The interface is optimized for both:
+
+«🖥️ Desktop
+📱 Mobile»
+
+---
+
+🚂 Deploy
+
+One-click Railway Workflow
+
+01 — Fork
+
+Fork this repository to your GitHub account.
+
+02 — Railway
+
+Create a new Railway project:
+
+New Project
+      ↓
+Deploy from GitHub Repo
+      ↓
+Select your fork
+      ↓
+Deploy
+
+03 — Port
+
+PabloPanel runs on:
+
+8080
+
+Expose port "8080" from Railway.
+
+04 — Domain
+
+Go to:
+
+Settings
+   ↓
+Networking
+   ↓
+Generate Domain
+
+Open the generated Railway domain.
+
+---
+
+🔐 Default Login
+
+«⚠️ IMPORTANT»
+
+Default administrator credentials:
+
+Username: admin
+Password: admin
+
+Change the default password after your first login.
+
+---
+
+📁 Project Structure
+
+PabloPanel/
+│
+├── static/
+│
+├── templates/
+│   ├── login.html
+│   ├── dashboard.html
+│   └── subscription.html
+│
+├── app.py
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+---
+
+⚙️ Configuration
+
+Default Port
+
+8080
+
+Platform
+
+Railway
+
+Interface
+
+Dark Neon Blue
+
+Authentication
+
+Admin Login
+
+---
+
+🛠️ Customization
+
+PabloPanel is designed to be customized.
+
+You can change:
+
+- 🎨 Colors
+- 🖥️ Dashboard
+- 🔗 Subscription page
+- 👤 User cards
+- 📦 Config cards
+- ⚡ Neon effects
+- 🏷️ Branding
+
+Frontend files are located inside:
+
+templates/
+static/
+
+---
+
+⭐ Support the Project
+
+If you like PabloPanel, consider giving the repository a ⭐ Star.
+
+Found a bug or have an idea?
+
+Open an Issue and let us know.
+
+---
+
+<div align="center">⚡ PabloPanel
+
+Dark. Neon. Simple.
+
+Built for modern VPN management.
+
+<br>"PabloPanel © 2026"
+
+</div>
