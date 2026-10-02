@@ -1,145 +1,227 @@
 ⚡ PabloPanel
 
-🎮 Dark Neon Gaming VPN Control Panel
+🎮 Dark Neon VPN Control Panel — Built for Gaming
 
-PabloPanel یک پنل مدیریت VPN با طراحی مدرن Dark Neon Blue است که برای مدیریت کاربران، ترافیک، کانفیگ‌ها و Subscription طراحی شده است.
+PabloPanel یک پنل مدیریت VPN با رابط کاربری مدرن Dark Neon Blue است؛ ساخته شده برای مدیریت ساده کاربران، ترافیک، Subscription و کانفیگ‌ها.
 
-پنل دارای رابط کاربری ریسپانسیو و مناسب موبایل و دسکتاپ است و بخش Subscription اختصاصی برای هر کاربر دارد.
+«🚀 Fork → Deploy on Railway → Expose port "8080" → Open PabloPanel
+
+چند مرحله ساده و پنل آماده استفاده است.»
 
 ---
 
 ✨ Features
 
-- 🎮 Dark Neon Gaming UI
-- 📱 Responsive Design
-- 👤 User Management
-- 📊 Traffic Usage Statistics
-- 📦 Traffic Limit Management
-- ⏳ Subscription Expiration
-- 🔗 Personal Subscription Link
-- 📋 Copy Config
-- 📋 Copy All Configs
-- 📱 QR Code برای کانفیگ‌ها
-- ⚡ Live User Status
-- 🌐 Railway Deployment
-- 🔐 Admin Login
-- 💎 اختصاصی‌سازی کامل پنل
-- 🎨 PabloPanel Branding
+| 
+👤 User Management| ساخت و مدیریت کاربران
+📊 Traffic Statistics| نمایش مصرف و باقی‌مانده ترافیک
+⏳ Expiration| نمایش زمان باقی‌مانده اشتراک
+🔗 Subscription| لینک Subscription اختصاصی برای هر کاربر
+📦 Config Management| نمایش تمام کانفیگ‌های کاربر
+📋 Copy Config| کپی سریع کانفیگ‌ها
+📋 Copy All| کپی تمام کانفیگ‌ها با یک کلیک
+📱 QR Code| ساخت QR برای هر کانفیگ
+🎨 Neon UI| رابط کاربری Dark Neon Blue
+📱 Responsive| مناسب موبایل و دسکتاپ
+🚂 Railway Ready| آماده Deploy روی Railway
+
+---
+
+🖥️ Dashboard
+
+پنل مدیریت شامل بخش‌های اصلی برای مدیریت کاربران و مشاهده وضعیت سرویس است.
+
+Dashboard
+
+- تعداد کل کاربران
+- کاربران فعال
+- حجم کل ترافیک
+- میزان مصرف
+- وضعیت سرور
+- نمودار مصرف
+- مدیریت کاربران
+
+---
+
+👤 Users
+
+برای هر کاربر می‌توانید اطلاعات زیر را مدیریت کنید:
+
+Username
+Status
+Traffic Limit
+Used Traffic
+Remaining Traffic
+Expiration
+Subscription
+Configs
+
+همچنین امکان فعال/غیرفعال کردن و حذف کاربر وجود دارد.
+
+---
+
+🔗 Subscription
+
+هر کاربر یک صفحه Subscription اختصاصی دریافت می‌کند.
+
+صفحه Subscription شامل:
+
+Username
+Total Traffic
+Used Traffic
+Remaining Traffic
+Days Left
+Subscription Link
+Configs
+
+و امکانات:
+
+COPY SUBSCRIPTION
+OPEN WEB
+COPY ALL
+COPY CONFIG
+QR CODE
+
+را در اختیار کاربر قرار می‌دهد.
 
 ---
 
 🚀 Deploy on Railway
 
-راه‌اندازی PabloPanel بسیار ساده است.
+راه‌اندازی PabloPanel روی Railway بسیار ساده است.
 
-فقط چند مرحله زیر را انجام دهید:
+1. Fork
 
-1️⃣ Fork کردن پروژه
-
-ابتدا روی دکمه Fork در بالای همین صفحه کلیک کنید تا پروژه داخل GitHub شما کپی شود.
+ابتدا این Repository را Fork کنید تا یک نسخه از پروژه داخل GitHub خودتان داشته باشید.
 
 ---
 
-2️⃣ ساخت پروژه در Railway
+2. Railway
 
-وارد Railway شوید و یک پروژه جدید بسازید.
-
-سپس:
+وارد Railway شوید و یک پروژه جدید ایجاد کنید:
 
 New Project
-↓
+      ↓
 Deploy from GitHub Repo
-↓
-انتخاب Repository
-↓
+      ↓
+Select your fork
+      ↓
 Deploy
 
-Railway پروژه را به صورت خودکار Build و Deploy می‌کند.
+Railway پروژه را Build و اجرا می‌کند.
 
 ---
 
-3️⃣ ساخت Domain
+3. Generate Domain
 
-بعد از Deploy شدن پروژه وارد تنظیمات سرویس شوید.
-
-از قسمت:
+بعد از Deploy شدن:
 
 Settings
-↓
+   ↓
 Networking
-↓
+   ↓
 Generate Domain
 
-یک Domain برای پنل ایجاد کنید.
+را انتخاب کنید.
+
+Railway برای شما یک Domain ایجاد می‌کند.
 
 ---
 
-4️⃣ تنظیم Port
+4. Port
 
-پورت پنل:
+PabloPanel روی پورت زیر اجرا می‌شود:
 
 8080
 
-است.
+بنابراین پورت سرویس را روی:
 
-بنابراین سرویس Railway باید روی پورت 8080 اجرا شود.
+8080
+
+قرار دهید.
+
+«⚠️ فقط پورت "8080" برای دسترسی به پنل استفاده می‌شود.»
 
 ---
 
-5️⃣ ورود به پنل
+5. Open PabloPanel
 
-بعد از Deploy شدن، Domain ساخته‌شده توسط Railway را باز کنید.
+بعد از ساخته شدن Domain، آن را باز کنید.
 
-صفحه Login برای شما نمایش داده می‌شود.
+مثلاً:
 
-🔐 اطلاعات ورود پیش‌فرض
+https://your-panel.up.railway.app
+
+صفحه Login نمایش داده می‌شود.
+
+---
+
+🔐 Default Login
+
+اطلاعات ورود پیش‌فرض:
 
 Username: admin
 Password: admin
 
-«⚠️ بعد از اولین ورود، حتماً رمز پیش‌فرض را تغییر دهید.»
+«⚠️ توصیه می‌شود بعد از اولین ورود، رمز عبور پیش‌فرض را تغییر دهید.»
 
 ---
 
-🇮🇷 آموزش فارسی
+🇮🇷 آموزش نصب فارسی
 
-اگر برای اولین بار است که با Railway کار می‌کنید، مراحل زیر را انجام دهید:
+اگر با Railway آشنایی ندارید، نگران نباشید؛ مراحل خیلی ساده است.
 
-مرحله اول
+مرحله ۱ — Fork
 
-Repository را Fork کنید.
+در بالای صفحه GitHub روی:
 
-یعنی پروژه را به GitHub خودتان منتقل کنید.
+Fork
+
+بزنید.
+
+با این کار پروژه وارد GitHub شما می‌شود.
 
 ---
 
-مرحله دوم
+مرحله ۲ — Railway
 
-وارد Railway شوید و از قسمت:
+وارد Railway شوید.
 
-New Project
-
-گزینه:
+یک پروژه جدید بسازید و گزینه:
 
 Deploy from GitHub Repo
 
 را انتخاب کنید.
 
-Repository که Fork کرده‌اید را انتخاب کنید.
+Repository مربوط به PabloPanel که Fork کرده‌اید را انتخاب کنید.
 
 ---
 
-مرحله سوم
+مرحله ۳ — Deploy
 
-منتظر بمانید تا Railway پروژه را Build و Deploy کند.
+روی Deploy بزنید و صبر کنید تا پروژه Build شود.
 
-اگر Build با موفقیت انجام شود، سرویس شما Online می‌شود.
+وقتی Deploy با موفقیت انجام شد، سرویس شما Online می‌شود.
 
 ---
 
-مرحله چهارم
+مرحله ۴ — Domain
 
-به قسمت Networking بروید و یک Domain بسازید.
+وارد:
+
+Settings → Networking
+
+شوید.
+
+سپس:
+
+Generate Domain
+
+را بزنید.
+
+---
+
+مرحله ۵ — Port
 
 پورت پروژه را روی:
 
@@ -149,66 +231,35 @@ Repository که Fork کرده‌اید را انتخاب کنید.
 
 ---
 
-مرحله پنجم
+مرحله ۶ — ورود
 
-Domain ساخته‌شده را داخل مرورگر باز کنید.
+حالا Domain ساخته‌شده را باز کنید.
 
-مثلاً:
+در صفحه Login از اطلاعات زیر استفاده کنید:
 
-https://your-panel.up.railway.app
+Username
+admin
 
-سپس با اطلاعات زیر وارد شوید:
-
-Username: admin
-Password: admin
-
----
+Password
+admin
 
 🎉 تمام شد!
 
 حالا PabloPanel شما آماده استفاده است.
 
-می‌توانید:
-
-- 👤 کاربر جدید بسازید
-- 📊 مصرف ترافیک کاربران را مشاهده کنید
-- ⏳ مدت اعتبار کاربران را مدیریت کنید
-- 🔗 Subscription کاربران را دریافت کنید
-- 📋 کانفیگ‌ها را کپی کنید
-- 📱 QR Code کانفیگ‌ها را دریافت کنید
-- 🌐 لینک Subscription را در اختیار کاربر قرار دهید
-
 ---
 
-📱 Subscription Panel
-
-هر کاربر می‌تواند صفحه Subscription اختصاصی خودش را داشته باشد.
-
-در این صفحه اطلاعاتی مانند:
-
-Username
-Total Traffic
-Used Traffic
-Remaining Traffic
-Days Left
-Number of Configs
-Subscription Link
-
-نمایش داده می‌شود.
-
-همچنین کاربر می‌تواند کانفیگ‌ها را مستقیماً Copy کند یا QR Code آن‌ها را دریافت کند.
-
----
-
-🛠️ Project Structure
-
-ساختار اصلی پروژه:
+⚙️ Project Structure
 
 PabloPanel/
 │
 ├── static/
+│   └── ...
 │
 ├── templates/
+│   ├── login.html
+│   ├── dashboard.html
+│   └── subscription.html
 │
 ├── app.py
 ├── Dockerfile
@@ -217,9 +268,9 @@ PabloPanel/
 
 ---
 
-🌐 Railway
+🛠️ Configuration
 
-PabloPanel برای اجرای ساده روی Railway آماده شده است.
+پروژه برای اجرای ساده روی Railway طراحی شده است.
 
 پورت اصلی:
 
@@ -227,18 +278,53 @@ PabloPanel برای اجرای ساده روی Railway آماده شده است.
 
 است.
 
----
-
-💙 Support
-
-اگر از پروژه استفاده کردید و پروژه برای شما مفید بود، می‌توانید Repository را ⭐ Star کنید.
-
-اگر مشکلی پیدا کردید، از قسمت Issues گیت‌هاب گزارش دهید.
+ساختار پروژه به شکلی است که می‌توانید ظاهر پنل، Dashboard و Subscription را مطابق نیاز خودتان تغییر دهید.
 
 ---
+
+🎮 Gaming UI
+
+PabloPanel با تمرکز روی یک رابط کاربری مدرن و گیمینگ طراحی شده است.
+
+ویژگی‌های ظاهری:
+
+- 🌌 Dark Background
+- 🔵 Neon Blue
+- 💠 Glass Cards
+- ⚡ Neon Effects
+- 📱 Mobile Friendly
+- 🎮 Gaming Style
+
+---
+
+📱 Mobile Friendly
+
+پنل برای نمایش روی موبایل نیز بهینه شده است.
+
+بنابراین کاربران می‌توانند Subscription خود را مستقیماً با گوشی باز کنند و:
+
+مشاهده مصرف
+مشاهده زمان باقی‌مانده
+کپی کانفیگ
+دریافت QR
+کپی Subscription
+
+را انجام دهند.
+
+---
+
+❤️ Credits
+
+Created with ❤️ for the PabloPanel project.
 
 ⚡ PabloPanel
 
-Dark. Fast. Simple.
+Dark • Neon • Gaming • Simple
 
-🎮 Built for Gaming & VPN Management.
+---
+
+⭐ Support
+
+اگر PabloPanel برای شما مفید بود، می‌توانید Repository را ⭐ Star کنید.
+
+برای گزارش مشکل یا پیشنهاد قابلیت جدید نیز می‌توانید از بخش Issues استفاده کنید.
