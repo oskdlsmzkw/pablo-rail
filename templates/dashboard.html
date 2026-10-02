@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
 <title>Pablo VPN | Dashboard</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
+
 :root{
     --bg:#020712;
     --bg2:#06101f;
@@ -108,7 +111,14 @@ button{
     box-shadow:
         0 0 15px rgba(0,157,255,.6),
         inset 0 0 12px rgba(255,255,255,.15);
-    font-size:23px;
+    overflow:hidden;
+}
+
+.brand-logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .brand-name{
@@ -869,6 +879,7 @@ button{
         flex:1;
     }
 }
+
 </style>
 </head>
 
@@ -881,12 +892,18 @@ button{
 <aside class="sidebar" id="sidebar">
 
     <div>
+
         <div class="brand">
-            <div class="brand-logo">🛡️</div>
+
+            <div class="brand-logo">
+                <img src="/static/logo.png" alt="Pablo VPN">
+            </div>
+
             <div>
                 <div class="brand-name">PABLO</div>
                 <div class="brand-sub">VPN CONTROL PANEL</div>
             </div>
+
         </div>
 
         <div class="nav-title">MAIN MENU</div>
@@ -901,7 +918,9 @@ button{
             Users
         </a>
 
-        <a href="#create" class="nav-item" onclick="openModal('addModal');closeSidebar();return false;">
+        <a href="#create"
+           class="nav-item"
+           onclick="openModal('addModal');closeSidebar();return false;">
             <span class="nav-icon">＋</span>
             Create User
         </a>
@@ -911,29 +930,46 @@ button{
             Panel Settings
         </a>
 
-        <div class="nav-title" style="margin-top:18px;">COMMUNITY</div>
+        <div class="nav-title" style="margin-top:18px;">
+            COMMUNITY
+        </div>
 
-        <a href="https://t.me/pablo_artor" target="_blank" class="nav-item">
+        <a href="https://t.me/pablo_artor"
+           target="_blank"
+           class="nav-item">
+
             <span class="nav-icon">✈</span>
             Join Telegram
+
         </a>
 
-        <a href="https://t.me/pablo_artor" target="_blank" class="nav-item">
+        <a href="https://t.me/pablo_artor"
+           target="_blank"
+           class="nav-item">
+
             <span class="nav-icon">♥</span>
             Support Developer
+
         </a>
+
     </div>
 
     <div class="sidebar-bottom">
 
         <div class="developer-box">
+
             <small>DESIGNED & DEVELOPED BY</small>
+
             <strong>Pablo VPN</strong>
+
         </div>
 
-        <a href="/logout" class="nav-item logout">
+        <a href="/logout"
+           class="nav-item logout">
+
             <span class="nav-icon">↪</span>
             Logout
+
         </a>
 
     </div>
@@ -947,20 +983,39 @@ button{
     <div class="topbar">
 
         <div style="display:flex;align-items:center;gap:10px;">
-            <button class="mobile-menu" onclick="toggleSidebar()">☰</button>
+
+            <button
+                class="mobile-menu"
+                onclick="toggleSidebar()">
+                ☰
+            </button>
 
             <div class="page-title">
+
                 <h1>Dashboard</h1>
-                <p>Welcome back to Pablo VPN Control Panel</p>
+
+                <p>
+                    Welcome back to Pablo VPN Control Panel
+                </p>
+
             </div>
+
         </div>
 
         <div class="profile">
+
             <div class="profile-info">
+
                 <strong>Administrator</strong>
+
                 <span>● Online</span>
+
             </div>
-            <div class="avatar">♙</div>
+
+            <div class="avatar">
+                ♙
+            </div>
+
         </div>
 
     </div>
@@ -970,39 +1025,111 @@ button{
     <section class="stats">
 
         <div class="card stat">
+
             <div class="stat-top">
-                <span class="stat-label">TOTAL USERS</span>
-                <span class="stat-icon">♙</span>
+
+                <span class="stat-label">
+                    TOTAL USERS
+                </span>
+
+                <span class="stat-icon">
+                    ♙
+                </span>
+
             </div>
-            <div class="stat-value">{{ total_users }}</div>
-            <div class="stat-change">↑ All accounts</div>
+
+            <div class="stat-value">
+                {{ total_users }}
+            </div>
+
+            <div class="stat-change">
+                ↑ All accounts
+            </div>
+
         </div>
 
         <div class="card stat">
+
             <div class="stat-top">
-                <span class="stat-label">ACTIVE USERS</span>
-                <span class="stat-icon">⚡</span>
+
+                <span class="stat-label">
+                    ACTIVE USERS
+                </span>
+
+                <span class="stat-icon">
+                    ⚡
+                </span>
+
             </div>
-            <div class="stat-value">{{ active_users }}</div>
-            <div class="stat-change">↑ Currently active</div>
+
+            <div class="stat-value">
+                {{ active_users }}
+            </div>
+
+            <div class="stat-change">
+                ↑ Currently active
+            </div>
+
         </div>
 
         <div class="card stat">
+
             <div class="stat-top">
-                <span class="stat-label">TOTAL TRAFFIC</span>
-                <span class="stat-icon">☁</span>
+
+                <span class="stat-label">
+                    TOTAL TRAFFIC
+                </span>
+
+                <span class="stat-icon">
+                    ☁
+                </span>
+
             </div>
-            <div class="stat-value">{{ total_gb }}<small style="font-size:11px;color:#66839c;"> GB</small></div>
-            <div class="stat-change">Available quota</div>
+
+            <div class="stat-value">
+
+                {{ total_gb }}
+
+                <small style="font-size:11px;color:#66839c;">
+                    GB
+                </small>
+
+            </div>
+
+            <div class="stat-change">
+                Available quota
+            </div>
+
         </div>
 
         <div class="card stat">
+
             <div class="stat-top">
-                <span class="stat-label">USED TRAFFIC</span>
-                <span class="stat-icon">◈</span>
+
+                <span class="stat-label">
+                    USED TRAFFIC
+                </span>
+
+                <span class="stat-icon">
+                    ◈
+                </span>
+
             </div>
-            <div class="stat-value">{{ total_used }}<small style="font-size:11px;color:#66839c;"> GB</small></div>
-            <div class="stat-change">Total consumption</div>
+
+            <div class="stat-value">
+
+                {{ total_used }}
+
+                <small style="font-size:11px;color:#66839c;">
+                    GB
+                </small>
+
+            </div>
+
+            <div class="stat-change">
+                Total consumption
+            </div>
+
         </div>
 
     </section>
@@ -1014,33 +1141,61 @@ button{
         <div class="card server-card">
 
             <div class="section-title">
+
                 <h2>Server Status</h2>
+
                 <span>PABLO VPN</span>
+
             </div>
 
             <div class="server-status">
+
                 <div class="status-dot"></div>
+
                 <div class="status-text">
-                    <strong>Server Online</strong>
-                    <span>Xray Core is running normally</span>
+
+                    <strong>
+                        Server Online
+                    </strong>
+
+                    <span>
+                        Xray Core is running normally
+                    </span>
+
                 </div>
+
             </div>
 
             <div class="server-info">
 
                 <div class="info-box">
+
                     <span>CORE</span>
-                    <strong>Xray</strong>
+
+                    <strong>
+                        Xray
+                    </strong>
+
                 </div>
 
                 <div class="info-box">
+
                     <span>PROTOCOL</span>
-                    <strong>VLESS</strong>
+
+                    <strong>
+                        VLESS
+                    </strong>
+
                 </div>
 
                 <div class="info-box">
+
                     <span>NETWORK</span>
-                    <strong>WebSocket</strong>
+
+                    <strong>
+                        WebSocket
+                    </strong>
+
                 </div>
 
             </div>
@@ -1050,11 +1205,19 @@ button{
         <div class="card traffic-card">
 
             <div class="section-title">
-                <h2>Traffic Overview</h2>
-                <span>{{ total_used }} GB USED</span>
+
+                <h2>
+                    Traffic Overview
+                </h2>
+
+                <span>
+                    {{ total_used }} GB USED
+                </span>
+
             </div>
 
             <div class="chart">
+
                 <div class="bar" style="--h:32%;"></div>
                 <div class="bar" style="--h:45%;"></div>
                 <div class="bar" style="--h:39%;"></div>
@@ -1069,6 +1232,7 @@ button{
                 <div class="bar" style="--h:84%;"></div>
                 <div class="bar" style="--h:69%;"></div>
                 <div class="bar" style="--h:90%;"></div>
+
             </div>
 
         </div>
@@ -1082,14 +1246,25 @@ button{
         <div class="section-title">
 
             <div>
-                <h2>Users Management</h2>
+
+                <h2>
+                    Users Management
+                </h2>
+
                 <span style="display:block;margin-top:5px;">
+
                     Manage your VPN accounts and configurations
+
                 </span>
+
             </div>
 
-            <button class="btn btn-blue" onclick="openModal('addModal')">
+            <button
+                class="btn btn-blue"
+                onclick="openModal('addModal')">
+
                 ＋ Create User
+
             </button>
 
         </div>
@@ -1100,35 +1275,80 @@ button{
 
             {% for user in users %}
 
-            {% set used_gb = (user.used_bytes / 1073741824)|round(2) %}
-            {% set percent = (user.used_bytes / (user.quota_gb * 1073741824) * 100)|round(1) if user.quota_gb > 0 else 0 %}
+            {% set used_gb =
+                (user.used_bytes / 1073741824)|round(2)
+            %}
+
+            {% set percent =
+                (
+                    user.used_bytes /
+                    (user.quota_gb * 1073741824) *
+                    100
+                )|round(1)
+                if user.quota_gb > 0
+                else 0
+            %}
 
             <div class="user-row">
 
                 <div class="user-name">
-                    <div class="user-avatar">♙</div>
-                    <div>
-                        <strong>{{ user.name }}</strong>
-                        <small>ID #{{ user.id }}</small>
+
+                    <div class="user-avatar">
+                        ♙
                     </div>
+
+                    <div>
+
+                        <strong>
+                            {{ user.name }}
+                        </strong>
+
+                        <small>
+                            ID #{{ user.id }}
+                        </small>
+
+                    </div>
+
                 </div>
 
                 <div class="user-data">
-                    <b>{{ used_gb }} GB</b><br>
+
+                    <b>
+                        {{ used_gb }} GB
+                    </b>
+
+                    <br>
+
                     Used
+
                 </div>
 
                 <div class="user-data">
-                    <b>{{ user.quota_gb }} GB</b><br>
+
+                    <b>
+                        {{ user.quota_gb }} GB
+                    </b>
+
+                    <br>
+
                     Quota
+
                 </div>
 
                 <div style="display:flex;align-items:center;gap:8px;justify-content:flex-end;">
 
                     {% if user.enabled == 1 %}
-                    <span class="badge active">● Active</span>
+
+                    <span class="badge active">
+                        ● Active
+                    </span>
+
                     {% else %}
-                    <span class="badge off">● Disabled</span>
+
+                    <span class="badge off">
+                        ● Disabled
+                    </span>
+
                     {% endif %}
 
                     <div class="actions">
@@ -1136,23 +1356,29 @@ button{
                         <button
                             class="btn btn-blue"
                             onclick="loadUserConfig({{ user.id }})">
+
                             Config
+
                         </button>
 
                         <button
                             class="btn btn-dark"
                             onclick="toggleUser({{ user.id }})">
+
                             {% if user.enabled == 1 %}
                             Off
                             {% else %}
                             On
                             {% endif %}
+
                         </button>
 
                         <button
                             class="btn btn-red"
                             onclick="deleteUser({{ user.id }})">
+
                             ✕
+
                         </button>
 
                     </div>
@@ -1166,8 +1392,15 @@ button{
         {% else %}
 
             <div style="padding:50px 10px;text-align:center;color:#557089;">
-                <div style="font-size:35px;margin-bottom:10px;">♙</div>
-                <div style="font-size:12px;">No users created yet</div>
+
+                <div style="font-size:35px;margin-bottom:10px;">
+                    ♙
+                </div>
+
+                <div style="font-size:12px;">
+                    No users created yet
+                </div>
+
             </div>
 
         {% endif %}
@@ -1187,26 +1420,46 @@ button{
     <div class="modal">
 
         <div class="modal-head">
-            <h3>＋ Create New User</h3>
-            <button class="close" onclick="closeModal('addModal')">×</button>
+
+            <h3>
+                ＋ Create New User
+            </h3>
+
+            <button
+                class="close"
+                onclick="closeModal('addModal')">
+                ×
+            </button>
+
         </div>
 
-        <form id="addUserForm" onsubmit="submitAddUser(event)">
+        <form
+            id="addUserForm"
+            onsubmit="submitAddUser(event)">
 
             <div class="form-group">
-                <label>USERNAME</label>
+
+                <label>
+                    USERNAME
+                </label>
+
                 <input
                     id="add_name"
                     class="input"
                     type="text"
                     placeholder="example: user01"
                     required>
+
             </div>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
 
                 <div class="form-group">
-                    <label>TRAFFIC QUOTA (GB)</label>
+
+                    <label>
+                        TRAFFIC QUOTA (GB)
+                    </label>
+
                     <input
                         id="add_quota"
                         class="input"
@@ -1214,10 +1467,15 @@ button{
                         value="30"
                         min="1"
                         required>
+
                 </div>
 
                 <div class="form-group">
-                    <label>VALIDITY (DAYS)</label>
+
+                    <label>
+                        VALIDITY (DAYS)
+                    </label>
+
                     <input
                         id="add_days"
                         class="input"
@@ -1225,6 +1483,7 @@ button{
                         value="30"
                         min="1"
                         required>
+
                 </div>
 
             </div>
@@ -1234,7 +1493,9 @@ button{
                 id="addBtnSubmit"
                 class="btn btn-blue"
                 style="width:100%;padding:13px;">
+
                 Create VPN Account
+
             </button>
 
         </form>
@@ -1250,15 +1511,27 @@ button{
     <div class="modal">
 
         <div class="modal-head">
-            <h3 id="cfgTitle">⚡ User Configurations</h3>
-            <button class="close" onclick="closeModal('configModal')">×</button>
+
+            <h3 id="cfgTitle">
+                ⚡ User Configurations
+            </h3>
+
+            <button
+                class="close"
+                onclick="closeModal('configModal')">
+                ×
+            </button>
+
         </div>
 
         <div class="sub-box">
 
-            <label>SUBSCRIPTION URL</label>
+            <label>
+                SUBSCRIPTION URL
+            </label>
 
             <div class="sub-row">
+
                 <input
                     id="subUrlField"
                     class="input"
@@ -1267,8 +1540,11 @@ button{
                 <button
                     onclick="copySubLink()"
                     class="btn btn-blue">
+
                     Copy
+
                 </button>
+
             </div>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:7px;">
@@ -1276,13 +1552,17 @@ button{
                 <button
                     onclick="openSubLink()"
                     class="btn btn-dark">
+
                     Open Web Panel
+
                 </button>
 
                 <button
                     onclick="copyAllConfigs()"
                     class="btn btn-green">
+
                     Copy All
+
                 </button>
 
             </div>
@@ -1311,7 +1591,9 @@ button{
             onclick="closeModal('configModal')"
             class="btn btn-dark"
             style="width:100%;margin-top:12px;">
+
             Close
+
         </button>
 
     </div>
@@ -1320,7 +1602,9 @@ button{
 
 <!-- ================= TOAST ================= -->
 
-<div id="toast" class="toast">System message</div>
+<div id="toast" class="toast">
+    System message
+</div>
 
 <script>
 
@@ -1329,40 +1613,49 @@ let currentSub = '';
 
 function showToast(message){
 
-    const toast = document.getElementById('toast');
+    const toast =
+        document.getElementById('toast');
 
     toast.innerText = message;
+
     toast.classList.add('show');
 
     setTimeout(()=>{
+
         toast.classList.remove('show');
+
     },2200);
+
 }
 
 function toggleSidebar(){
 
-    document.getElementById('sidebar')
+    document
+        .getElementById('sidebar')
         .classList.toggle('open');
 
 }
 
 function closeSidebar(){
 
-    document.getElementById('sidebar')
+    document
+        .getElementById('sidebar')
         .classList.remove('open');
 
 }
 
 function openModal(id){
 
-    document.getElementById(id)
+    document
+        .getElementById(id)
         .classList.add('show');
 
 }
 
 function closeModal(id){
 
-    document.getElementById(id)
+    document
+        .getElementById(id)
         .classList.remove('show');
 
 }
@@ -1372,47 +1665,64 @@ async function submitAddUser(event){
     event.preventDefault();
 
     const name =
-        document.getElementById('add_name')
-        .value.trim();
+        document
+        .getElementById('add_name')
+        .value
+        .trim();
 
     const quota =
-        document.getElementById('add_quota')
+        document
+        .getElementById('add_quota')
         .value;
 
     const days =
-        document.getElementById('add_days')
+        document
+        .getElementById('add_days')
         .value;
 
     const button =
-        document.getElementById('addBtnSubmit');
+        document
+        .getElementById('addBtnSubmit');
 
-    button.innerText = 'Creating...';
+    button.innerText =
+        'Creating...';
+
     button.disabled = true;
 
     try{
 
         const response =
-            await fetch('/api/add_user',{
-                method:'POST',
-                headers:{
-                    'Content-Type':'application/json'
-                },
-                body:JSON.stringify({
-                    name,
-                    quota,
-                    days
-                })
-            });
+            await fetch(
+                '/api/add_user',
+                {
+                    method:'POST',
+
+                    headers:{
+                        'Content-Type':
+                            'application/json'
+                    },
+
+                    body:JSON.stringify({
+                        name,
+                        quota,
+                        days
+                    })
+                }
+            );
 
         const data =
             await response.json();
 
         if(data.status === 'success'){
 
-            showToast('VPN account created successfully');
+            showToast(
+                'VPN account created successfully'
+            );
 
             setTimeout(()=>{
+
                 location.reload();
+
             },600);
 
         }else{
@@ -1426,16 +1736,20 @@ async function submitAddUser(event){
                 'Create VPN Account';
 
             button.disabled = false;
+
         }
 
     }catch(error){
 
-        alert('Server connection error');
+        alert(
+            'Server connection error'
+        );
 
         button.innerText =
             'Create VPN Account';
 
         button.disabled = false;
+
     }
 
 }
@@ -1447,19 +1761,25 @@ async function toggleUser(id){
         const response =
             await fetch(
                 '/api/toggle_user/' + id,
-                {method:'POST'}
+                {
+                    method:'POST'
+                }
             );
 
         const data =
             await response.json();
 
         if(data.status === 'success'){
+
             location.reload();
+
         }
 
     }catch(error){
 
-        alert('Failed to change user status');
+        alert(
+            'Failed to change user status'
+        );
 
     }
 
@@ -1470,7 +1790,9 @@ async function deleteUser(id){
     if(!confirm(
         'Are you sure you want to delete this user?'
     )){
+
         return;
+
     }
 
     try{
@@ -1478,7 +1800,9 @@ async function deleteUser(id){
         const response =
             await fetch(
                 '/api/delete_user/' + id,
-                {method:'POST'}
+                {
+                    method:'POST'
+                }
             );
 
         const data =
@@ -1491,14 +1815,18 @@ async function deleteUser(id){
             );
 
             setTimeout(()=>{
+
                 location.reload();
+
             },600);
 
         }
 
     }catch(error){
 
-        alert('Failed to delete user');
+        alert(
+            'Failed to delete user'
+        );
 
     }
 
@@ -1506,7 +1834,9 @@ async function deleteUser(id){
 
 async function loadUserConfig(id){
 
-    showToast('Loading configurations...');
+    showToast(
+        'Loading configurations...'
+    );
 
     try{
 
@@ -1526,75 +1856,96 @@ async function loadUserConfig(id){
             );
 
             return;
+
         }
 
-        currentConfigs = data.configs;
-        currentSub = data.sub;
+        currentConfigs =
+            data.configs;
 
-        document.getElementById('cfgTitle')
+        currentSub =
+            data.sub;
+
+        document
+            .getElementById('cfgTitle')
             .innerText =
             '⚡ Configurations · ' +
             data.user.name;
 
-        document.getElementById('subUrlField')
-            .value = data.sub;
+        document
+            .getElementById('subUrlField')
+            .value =
+            data.sub;
 
         const container =
-            document.getElementById('cfgContainer');
+            document
+            .getElementById('cfgContainer');
 
         container.innerHTML = '';
 
-        data.configs.forEach((item,index)=>{
+        data.configs.forEach(
+            (item,index)=>{
 
-            const box =
-                document.createElement('div');
+                const box =
+                    document.createElement('div');
 
-            box.className = 'config-box';
+                box.className =
+                    'config-box';
 
-            box.innerHTML = `
+                box.innerHTML = `
 
-                <div class="config-top">
+                    <div class="config-top">
 
-                    <div>
-                        <div class="config-title">
-                            ${escapeHtml(item.title)}
+                        <div>
+
+                            <div class="config-title">
+                                ${escapeHtml(item.title)}
+                            </div>
+
+                            <div class="config-desc">
+                                ${escapeHtml(item.desc)}
+                            </div>
+
                         </div>
 
-                        <div class="config-desc">
-                            ${escapeHtml(item.desc)}
+                        <div class="config-actions">
+
+                            <button
+                                class="btn btn-blue"
+                                data-index="${index}"
+                                onclick="copyConfigByIndex(this)">
+
+                                Copy
+
+                            </button>
+
+                            <button
+                                class="btn btn-dark"
+                                data-index="${index}"
+                                onclick="qrConfigByIndex(this)">
+
+                                QR
+
+                            </button>
+
                         </div>
-                    </div>
-
-                    <div class="config-actions">
-
-                        <button
-                            class="btn btn-blue"
-                            data-index="${index}"
-                            onclick="copyConfigByIndex(this)">
-                            Copy
-                        </button>
-
-                        <button
-                            class="btn btn-dark"
-                            data-index="${index}"
-                            onclick="qrConfigByIndex(this)">
-                            QR
-                        </button>
 
                     </div>
 
-                </div>
+                `;
 
-            `;
+                container.appendChild(box);
 
-            container.appendChild(box);
+            }
+        );
 
-        });
+        document
+            .getElementById('qrWrap')
+            .style.display =
+            'none';
 
-        document.getElementById('qrWrap')
-            .style.display = 'none';
-
-        openModal('configModal');
+        openModal(
+            'configModal'
+        );
 
     }catch(error){
 
@@ -1609,6 +1960,7 @@ async function loadUserConfig(id){
 function escapeHtml(value){
 
     return String(value)
+
         .replace(/&/g,'&amp;')
         .replace(/</g,'&lt;')
         .replace(/>/g,'&gt;')
@@ -1620,7 +1972,9 @@ function escapeHtml(value){
 function copyConfigByIndex(button){
 
     const index =
-        Number(button.dataset.index);
+        Number(
+            button.dataset.index
+        );
 
     copyText(
         currentConfigs[index].config
@@ -1631,7 +1985,9 @@ function copyConfigByIndex(button){
 function qrConfigByIndex(button){
 
     const index =
-        Number(button.dataset.index);
+        Number(
+            button.dataset.index
+        );
 
     showQR(
         currentConfigs[index].config,
@@ -1645,9 +2001,11 @@ function copySubLink(){
     navigator.clipboard
         .writeText(currentSub)
         .then(()=>{
+
             showToast(
                 'Subscription URL copied'
             );
+
         });
 
 }
@@ -1665,15 +2023,19 @@ function copyAllConfigs(){
 
     const all =
         currentConfigs
-        .map(item=>item.config)
+        .map(
+            item=>item.config
+        )
         .join('\n');
 
     navigator.clipboard
         .writeText(all)
         .then(()=>{
+
             showToast(
                 'All configurations copied'
             );
+
         });
 
 }
@@ -1683,9 +2045,11 @@ function copyText(text){
     navigator.clipboard
         .writeText(text)
         .then(()=>{
+
             showToast(
                 'Configuration copied'
             );
+
         });
 
 }
@@ -1693,41 +2057,58 @@ function copyText(text){
 function showQR(config,title){
 
     const wrap =
-        document.getElementById('qrWrap');
+        document.getElementById(
+            'qrWrap'
+        );
 
     const box =
-        document.getElementById('qrBox');
+        document.getElementById(
+            'qrBox'
+        );
 
     box.innerHTML = '';
 
-    new QRCode(box,{
-        text:config,
-        width:180,
-        height:180
-    });
-
-    document.getElementById('qrText')
-        .innerText = title;
-
-    wrap.style.display = 'block';
-
-}
-
-document.querySelectorAll('.overlay')
-.forEach(overlay=>{
-
-    overlay.addEventListener(
-        'click',
-        function(event){
-
-            if(event.target === overlay){
-                overlay.classList.remove('show');
-            }
-
+    new QRCode(
+        box,
+        {
+            text:config,
+            width:180,
+            height:180
         }
     );
 
-});
+    document
+        .getElementById('qrText')
+        .innerText =
+        title;
+
+    wrap.style.display =
+        'block';
+
+}
+
+document
+    .querySelectorAll('.overlay')
+    .forEach(overlay=>{
+
+        overlay.addEventListener(
+            'click',
+            function(event){
+
+                if(
+                    event.target === overlay
+                ){
+
+                    overlay
+                        .classList
+                        .remove('show');
+
+                }
+
+            }
+        );
+
+    });
 
 </script>
 
