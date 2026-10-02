@@ -1,72 +1,59 @@
-<div align="center">⚡ PabloPanel
+<div align="center">🟣 PabloPanel
 
-Dark Neon VPN Control Panel
+A modern VPN control panel built for gaming.
 
 Clean client links. Live statistics. Beautiful subscription pages.
 
-<br>""Railway" (https://img.shields.io/badge/Deploy-Railway-8B5CF6?style=for-the-badge&logo=railway&logoColor=white)" (https://railway.app/)
-""Docker" (https://img.shields.io/badge/Docker-Ready-8B5CF6?style=for-the-badge&logo=docker&logoColor=white)" (https://www.docker.com/)
-""VPN" (https://img.shields.io/badge/VPN-Control%20Panel-8B5CF6?style=for-the-badge)" (#)
+<br><img src="https://img.shields.io/badge/PabloPanel-Dark%20Neon-8B5CF6?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Railway-Ready-8B5CF6?style=for-the-badge&logo=railway&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-Ready-8B5CF6?style=for-the-badge&logo=docker&logoColor=white" /></div>---
 
-</div>---
+«💜 Tip
 
-💜 A VPN Panel Built to Look Different
+Fork → Deploy on Railway → Expose port "8080" → Open PabloPanel.
 
-PabloPanel is a modern VPN control panel focused on a clean administration experience, beautiful subscription pages and simple client management.
+Four simple steps. No complicated setup.»
 
-«Tip: Fork → Deploy on Railway → Expose port "8080" → Open PabloPanel.»
+<br><table>
+<tr>
+<td width="50%">🎮 Gaming Interface
 
----
+A dark neon gaming UI designed for a fast and clean experience on both mobile and desktop.
 
-✦ Why PabloPanel?
+</td>
+<td width="50%">⚡ Simple Management
 
-⚡| Feature| Description
-🎮| Gaming UI| Dark gaming-inspired interface with neon styling
-👤| User Management| Create, manage, enable and remove users
-📊| Live Statistics| Traffic, usage and user statistics
-🔗| Subscription Links| Generate and manage client subscription links
-📱| Mobile Friendly| Responsive interface for phones and desktop
-📋| Copy Configs| Quickly copy individual or all configurations
-🟣| Neon Design| Modern dark interface with purple/neon accents
-🚀| Railway Ready| Simple deployment with Docker
+Create, manage, enable, disable and remove users directly from the dashboard.
 
----
+</td>
+</tr><tr>
+<td width="50%">📊 Live Statistics
 
-🎮 Gaming Dashboard
+View users, active accounts, traffic usage and server information from one dashboard.
 
-PabloPanel comes with a gaming-focused interface designed around a dark neon experience.
+</td>
+<td width="50%">🔗 Subscription System
 
-- 🎮 Gaming-style dashboard
-- ⚡ Fast navigation
-- 🌌 Neon visual design
-- 📱 Mobile responsive layout
-- 🕹️ Dedicated game section
+Every user gets a dedicated subscription page with their real configurations and account information.
 
----
+</td>
+</tr><tr>
+<td width="50%">📱 Mobile Friendly
 
-📡 Subscription Page
+The dashboard and subscription pages are fully designed to work smoothly on phones.
 
-Every user can have a dedicated subscription page containing:
+</td>
+<td width="50%">🟣 Neon Design
 
-- 👤 Username
-- 🟢 Account status
-- 📊 Used traffic
-- 💾 Remaining traffic
-- ⏳ Remaining days
-- 🔗 Subscription URL
-- 📋 Copy all configurations
-- 📱 QR codes
-- ⚡ Individual configuration actions
+A dark interface with purple / neon accents inspired by modern gaming dashboards.
 
-The subscription interface is designed to feel like a premium gaming VPN panel, not a basic config page.
+</td>
+</tr>
+</table>---
 
----
+👤 Users
 
-👥 User Management
-
-Manage users directly from the dashboard.
-
-Available actions:
+PabloPanel gives you a simple way to manage your VPN users.
 
 - Create users
 - Enable / disable accounts
@@ -78,22 +65,39 @@ Available actions:
 
 ---
 
+📡 Subscription
+
+A dedicated page is generated for every user.
+
+It includes:
+
+Username · Status · Traffic · Remaining Volume · Remaining Days · Subscription URL
+
+And also provides:
+
+- 📋 Copy subscription
+- 📋 Copy all configurations
+- 📱 QR codes
+- ⚡ Individual configuration actions
+- 🎮 Gaming section
+
+---
+
 📊 Dashboard
 
-The main dashboard provides a quick overview of your server and users.
+The dashboard gives you a quick overview of your panel.
 
-┌──────────────────────────────────────────────┐
-│                 PabloPanel                   │
-├──────────────────────────────────────────────┤
-│                                              │
-│   USERS        ACTIVE       TRAFFIC          │
-│     24           19          128 GB          │
-│                                              │
-│              TRAFFIC OVERVIEW                │
-│                                              │
-│   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│                                              │
-└──────────────────────────────────────────────┘
+Users
+
+Active Users
+
+Total Traffic
+
+Used Traffic
+
+Server Status
+
+Everything important is available from one place.
 
 ---
 
@@ -103,52 +107,51 @@ The main dashboard provides a quick overview of your server and users.
 
 Fork this repository to your GitHub account.
 
-2. Create Railway Project
+2. Railway
 
-Create a new Railway project and deploy the repository.
+Create a new Railway project and select your repository.
 
 3. Deploy
 
 Railway automatically builds the project using the included "Dockerfile".
 
-4. Expose Port
+4. Port
 
-Use:
+Expose:
 
 8080
 
-5. Open PabloPanel
+5. Open
 
-Open the generated Railway domain and access your panel.
+Open your Railway domain and enter PabloPanel.
 
 ---
 
-🔐 Default Login
+«⚠️ Important
 
-Username: admin
-Password: admin
+PabloPanel uses port "8080" for the web panel.
 
-«Change your credentials before using the panel in production.»
+Only expose the port required by the panel.»
 
 ---
 
 ⚙️ Configuration
 
 Setting| Value
+Panel| PabloPanel
 Port| "8080"
 Platform| Railway
 Container| Docker
-Interface| Dark Neon
-Panel| PabloPanel
+Theme| Dark Neon
+Interface| Responsive
 
 ---
 
-📁 Project Structure
+📁 Structure
 
 PabloPanel/
 │
 ├── static/
-│   └── assets
 │
 ├── templates/
 │   ├── login.html
@@ -161,30 +164,10 @@ PabloPanel/
 
 ---
 
-🎨 Customization
+<div align="center">🟣 PabloPanel
 
-PabloPanel is designed to be easy to customize.
+VPN Control · Subscriptions · Gaming
 
-You can modify:
-
-- 🎨 Colors
-- 🖥️ Dashboard layout
-- 👤 User interface
-- 📡 Subscription page
-- 🎮 Gaming section
-- 🔗 Branding
-- ⚡ Neon effects
-
----
-
-💜 PabloPanel
-
-Dark. Fast. Clean. Gaming-focused.
-
-Built for people who want their VPN panel to look as good as it works.
-
-<br><div align="center">⚡ PabloPanel
-
-VPN Control • Subscriptions • Gaming
+Built to look different.
 
 </div>
