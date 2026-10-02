@@ -94,44 +94,26 @@ button{
 .brand{
     display:flex;
     align-items:center;
-    gap:11px;
     padding:5px 8px 25px;
     border-bottom:1px solid rgba(0,157,255,.12);
     margin-bottom:20px;
 }
 
-.brand-logo{
-    width:44px;
-    height:44px;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(145deg,#008cff,#00d9ff);
-    box-shadow:
-        0 0 15px rgba(0,157,255,.6),
-        inset 0 0 12px rgba(255,255,255,.15);
-    overflow:hidden;
-}
-
-.brand-logo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-}
-
 .brand-name{
-    font-size:17px;
+    font-size:20px;
     font-weight:900;
-    letter-spacing:1.5px;
+    letter-spacing:2px;
+    color:#ffffff;
+    text-shadow:
+        0 0 8px rgba(0,157,255,.8),
+        0 0 18px rgba(0,157,255,.45);
 }
 
 .brand-sub{
     color:#00bfff;
     font-size:9px;
-    margin-top:3px;
-    letter-spacing:1px;
+    margin-top:4px;
+    letter-spacing:1.5px;
 }
 
 .nav-title{
@@ -895,12 +877,8 @@ button{
 
         <div class="brand">
 
-            <div class="brand-logo">
-                <img src="/static/logo.png" alt="Pablo VPN">
-            </div>
-
             <div>
-                <div class="brand-name">PABLO</div>
+                <div class="brand-name">PABLO VPN</div>
                 <div class="brand-sub">VPN CONTROL PANEL</div>
             </div>
 
@@ -1962,9 +1940,13 @@ function escapeHtml(value){
     return String(value)
 
         .replace(/&/g,'&amp;')
+
         .replace(/</g,'&lt;')
+
         .replace(/>/g,'&gt;')
+
         .replace(/"/g,'&quot;')
+
         .replace(/'/g,'&#039;');
 
 }
